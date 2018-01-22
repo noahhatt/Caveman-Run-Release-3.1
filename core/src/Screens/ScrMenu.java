@@ -37,8 +37,8 @@ public class ScrMenu implements Screen {
         oc.setToOrtho(true, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.update();
         batch = new SpriteBatch();
-        btnPlay = new Button(265,0,150,90,"playword.psd");
-        btnContr = new Button(400, 140, 100, 80, "Contr.jpg");
+        btnPlay = new Button(Gdx.graphics.getWidth() / 2 - 75,Gdx.graphics.getHeight() / 4,150,100,"playword.psd");
+        btnContr = new Button(Gdx.graphics.getWidth() / 2 - 50, Gdx.graphics.getHeight() / 2 + 100, 100, 80, "Contr.jpg");
 
     }
 
@@ -60,7 +60,7 @@ public class ScrMenu implements Screen {
 
     @Override
     public void render(float f) {
-        Gdx.gl.glClearColor(1, 0, 0, 1);
+        Gdx.gl.glClearColor(0.25f, 0.25f, 1.5f, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
         changeScreen();
         batch.begin();
